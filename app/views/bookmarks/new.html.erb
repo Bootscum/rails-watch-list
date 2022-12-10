@@ -1,0 +1,5 @@
+<%= simple_form_for [@list, @movies] do |f| %>
+  <%= f.input :name %>
+  <%= f.association :movies, :as => :check_boxes %>
+  <%= f.button :submit %>
+<% end %>

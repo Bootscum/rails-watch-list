@@ -1,0 +1,7 @@
+<div class="bg-light">
+<%= simple_form_for (@list) do |f| %>
+  <%= f.input :name %>
+  <div class="bg-light"><%= f.association :movies, :as => :check_boxes %></div>
+  <%= f.submit 'Create list' %>
+<% end %>
+</div>

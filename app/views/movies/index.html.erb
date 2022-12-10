@@ -1,0 +1,54 @@
+
+  <h1 class="text-light">Movies</h1>
+  <%# <div class="movies-grid">
+    <% @movies.each do |movie| %>
+      <%# <div class="box-poster"> %>
+        <%#= link_to movie_path(movie) do %>
+          <%#= image_tag movie.poster_url, class: 'img-poster' %>
+        <%# end %>
+        <%# <p class="movie-path"><%= movie.title</p> %>
+      <%# </div> %>
+      <%#= link_to "Add a comment", edit_movie_path(movie) %>
+    <%# end %>
+  <%# </div> %>
+
+<%#
+   <% @movies.each do |movie| %>
+<%# <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <%# <h5 class="card-title"><%= movie.title %>
+        <%# <p class="card-text"><%= movie.comment %>
+        <%# <div class="d-flex justify-content-evenly">
+          <p class="card-text"><%= link_to "Add a comment", edit_movie_path(movie), class:"btn btn-warning" %></p>
+          <%# <p class="card-text"><%= link_to "Add a bookmark", edit_movie_path(movie), class:"btn btn-warning" %></p> %>
+        <%# </div>
+      </div>
+    </div>
+  </div>
+</div> %>
+<%# end %>
+
+
+<div class="row">
+    <% @movies.each do |movie| %>
+      <div class="col-sm-4">
+        <div class="card text-bg-light mt-4" style="max-width: 20rem;">
+        <i class="fa-solid fa-star position-absolute top-0 end-0"><%= movie.rating %></i>
+            <%# <div class="position-absolute top-0 end-0"><%= movie.rating %>
+          <h5 class="card-title justify-content-center"><%= movie.title %></h5>
+            <div class="card-body">
+              <p class="card-text"><%= movie.overview %></p>
+            </div>
+            <div class="d-flex justify-content-sm-evenly mx-1">
+              <p class="card-text"><%= link_to "Edit overview", edit_movie_path(movie), class:"btn btn-warning" %></p>
+              <p class="card-text"><%= link_to "View movie", movie_path(movie), class:"btn btn-warning" %></p>
+            </div>
+        </div>
+      </div>
+<% end %>
+</div>

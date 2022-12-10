@@ -1,0 +1,16 @@
+<div class="row">
+  <% @lists.each do |list| %>
+  <div class="col-sm-4">
+    <div class="card text-bg-light mt-3" style="max-width: 18rem;">
+
+      <h5 class="card-title justify-content-center mx-1"><%= list.name %></h5>
+      <div class="card-body mx-1">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+        <%= link_to "#{list.name}", list_path(list), class:"btn btn-warning mx-1 my-1"   %>
+    </div>
+  </div>
+  <% end %>
+</div>
+<%#= link_to "Make a list", new_list_path %>
+  <%# new_list_movies_bookmark %>

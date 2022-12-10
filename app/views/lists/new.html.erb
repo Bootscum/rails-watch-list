@@ -1,0 +1,16 @@
+<h1 class="text-light">Let's set up your new Watch list!</h1>
+
+
+  <%# <%= form_with model: [@list, @movies] do |f| %>
+    <%# <%= f.select :movie, options_for_select(Movie.pluck(:name, :id)), {}, {multiple: true, data: {behavior: 'tom-select'}} %>
+    <%# <%= f.submit 'Save', class: "mt-4 btn btn-primary text-white rounded" %>
+<%# <% end %>
+
+
+  <%# <%= simple_form_for [@list, @movies] do |f| %>
+    <%# <%= f.association :list, input_html: {} %>
+    <%# <%= f.input :movies %>
+    <%# <%= f.submit 'Save', class: "btn btn-primary text-white rounded" %>
+<%# <% end %>
+
+<%= render "form", list: @list %>

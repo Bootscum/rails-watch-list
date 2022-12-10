@@ -1,0 +1,30 @@
+<%# <h1 class="text-light">Edit Your movie!</h1>
+  <div class="bg-light container">
+  #<h3><%= @movie.title %></h3>
+  <%# <div class="mb-3"> %>
+    <%# <label for="Comments" class="form-label">Comments</label> %>
+    <%# <label for="textarea">Write your Overview here:</label> %>
+    <%# <textarea class="form-control bg-light" id="exampleFormControlTextarea1" rows="3" placeholder='<%= @movie.overview %>' %>
+<%# ></textarea> %>
+  <%# </div> %>
+  <%# <div class="mx-3">
+      <%= link_to "Confirm Changes", movies_path(@movie), class:"btn btn-warning" %>
+      <%#= link_to "Go Back", movies_path, class:"btn btn-warning" %>
+  <%# </div> %>
+<%# </div> %>
+
+<h1 class="text-light">Edit Your movie!</h1>
+  <%= simple_form_for @movie do |movie| %>
+    <div class="bg-light container">
+      <h3><%= @movie.title %></h3>
+      <div class="mb-3">
+        <%= movie.input :overview, as: :text %>
+      </div>
+      <%= movie.input :rating, collection: 1..10 %>
+      <div class="mx-3">
+        <%= movie.submit "Update", class:"btn btn-warning" %>
+        <%= link_to "Go Back", movies_path, class:"btn btn-warning" %>
+        <%= link_to "Delete Movie", movie_path(movie), class:"btn btn-warning" %>
+      </div>
+    </div>
+<% end %>

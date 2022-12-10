@@ -1,0 +1,27 @@
+
+
+<div class="container mt-15-px">
+  <div class="row movie-display ">
+    <div class="col-md-6 float-md-end mb-3 ms-md-3">
+      <img class="img-poster img-fluid" src="<%= @movie.poster_url %>" >
+    </div>
+    <div class="position-absolute top-50 start-100 translate-middle mx-5">
+      <div class="col-md-6 bg-light">
+        <div>
+          <h3><%= @movie.title %></h3>
+          <i class="fa-solid fa-star"><%= @movie.rating %></i>
+        </div>
+
+        <div>
+        <h5>Overview</h5>
+          <em><p><%= @movie.overview %></p></em>
+        </div>
+        <div class="justify-content-center mx-1">
+          <%= link_to "Go Back", movies_path, class:"btn btn-warning" %>
+          <%= link_to "Edit overview", edit_movie_path(@movie), class:"btn btn-warning" %>
+          <%= link_to "Delete Movie", @movie, data:{turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-warning"  %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
